@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #0d0d0d; 
+    color: #e0e0e0; 
+}
+
+/* Navbar */
+header {
+    background: #1a1a1a; 
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo a {
+    color: #00ffcc; 
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffcc;
+}
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+.navbar nav ul li a:hover {
+    color: #ff00ff; 
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 0;
+}
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+.hero-text h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #00ffcc, 0 0 30px #0099cc;
+}
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+.hero .btn {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #00ffcc, #ff00ff);
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff;
+}
+.hero .btn:hover {
+    background: linear-gradient(90deg, #ff00ff, #00ffcc);
+    transform: scale(1.1);
+}
+
+/* Models Section */
+.models {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1a1a1a;
+}
+.models h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #0099cc;
+}
+.model-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.model {
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+.model:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+}
+.model img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.model h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+.model p {
+    font-size: 1.2em;
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+.model .btn {
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+.model .btn:hover {
+    background: #ff00ff;
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background: #121212;
+}
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #1a1a1a;
+    color: #fff;
+}
+.contact button {
+    padding: 10px;
+    background: #ff00ff;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+.contact button:hover {
+    background: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #202020;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+footer p {
+    font-size: 1em;
+    color: #00ffcc;
+}
